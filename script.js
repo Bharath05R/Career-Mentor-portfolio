@@ -91,3 +91,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+function sendToWhatsApp(event) {
+
+  event.preventDefault();
+
+  var name = document.getElementById('userName').value;
+  var email = document.getElementById('userEmail').value;
+  var message = document.getElementById('userMsg').value;
+
+  var myPhoneNumber = "918526426805"; 
+
+ 
+  var text = "Hello! New Inquiry from Website:%0A%0A" +
+             "*Name:* " + encodeURIComponent(name) + "%0A" +
+             "*Email:* " + encodeURIComponent(email) + "%0A" +
+             "*Message:* " + encodeURIComponent(message);
+
+
+  var whatsappUrl = "https://wa.me/" + myPhoneNumber + "?text=" + text;
+  window.open(whatsappUrl, '_blank');
+}
