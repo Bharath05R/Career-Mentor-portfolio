@@ -436,21 +436,23 @@
                 <h2>Let's Build Your <span class="gradient-text">Career Together</span></h2>
                 <p>Whether you need custom mentoring, resume restructuring, or personal branding strategy—drop a message below.</p>
 
-                <form class="contact-form" onsubmit="event.preventDefault();">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="4" placeholder="How can I help you?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary magnetic-btn full-width">
-                        <span>Send Message</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
+         <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+             <div class="form-group">
+                  <input type="text" id="userName" placeholder="Your Name" required>
+             </div>
+      
+             <div class="form-group">
+                  <input type="email" id="userEmail" placeholder="Your Email" required>
+              </div>
+  
+             <div class="form-group">
+                  <textarea id="userMsg" rows="4" placeholder="How can I help you?" required></textarea>
+             </div>
+            <button type="submit" class="btn btn-primary magnetic-btn full-width">
+               <span>Send Message</span>
+               <i class="fa-solid fa-paper-plane"></i>
+          </button>
+      </form>
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/bharathr05" target="_blank" class="social-icon magnetic-btn" aria-label="LinkedIn">
